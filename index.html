@@ -176,10 +176,14 @@
       <div id="hpcResources" class="submenu">
        <button class="toggle-btn" onclick="toggleSubmenu('gettingStarted', this)">Getting started with HPC resources</button>
        <div id="gettingStarted" class="submenu">
-        <a href="https://access-ci.org/get-started/" class="link-button" target="_blank"><button>ACCESS-CI: Get Started</button></a>
-        <p class="description"><strong>NAIRR Pilot:</strong> A separate federal program from ACCESS-CI. The National AI Research Resource (NAIRR) Pilot focuses specifically on AI research, connecting U.S. researchers and educators to AI-focused resources such as GPU compute, datasets, and models. It is coordinated by the National Science Foundation along with other federal agencies and private-sector partners.</p>
-        <button class="toggle-btn" onclick="toggleSubmenu('nairrLinks', this)">NAIRR Pilot resources</button>
-        <div id="nairrLinks" class="submenu">
+        <button class="toggle-btn" onclick="toggleSubmenu('accessCI', this)">ACCESS-CI</button>
+        <div id="accessCI" class="submenu">
+         <p class="description">ACCESS-CI (Advanced Cyberinfrastructure Coordination Ecosystem: Services &amp; Support) is a program funded by the National Science Foundation that helps researchers and educators use advanced computing systems at no cost. Unlike NAIRR, which is AI-specific, ACCESS-CI provides general-purpose access to the nation's high-performance computing infrastructure across many disciplines.</p>
+         <a href="https://access-ci.org/get-started/" class="link-button" target="_blank"><button>ACCESS-CI: Get Started</button></a>
+        </div>
+        <button class="toggle-btn" onclick="toggleSubmenu('nairrPilot', this)">NAIRR Pilot</button>
+        <div id="nairrPilot" class="submenu">
+         <p class="description">The National AI Research Resource (NAIRR) Pilot focuses specifically on AI research, connecting U.S. researchers and educators to AI-focused resources such as GPU compute, datasets, and models. It is coordinated by the National Science Foundation along with other federal agencies and private-sector partners.</p>
          <a href="https://nairrpilot.org/getting-started" class="link-button" target="_blank"><button>NAIRR Pilot: Getting Started</button></a>
          <a href="https://nairrpilot.org/help/faq" class="link-button" target="_blank"><button>NAIRR Pilot: FAQ</button></a>
          <a href="https://nairrpilot.org/projects/awarded" class="link-button" target="_blank"><button>NAIRR Pilot: Awarded Projects</button></a>
@@ -300,8 +304,11 @@
     <button class="main-button toggle-btn" onclick="toggleSubmenu('resources', this)">Campus Champion Resources</button>
     <div id="resources" class="submenu">
      <a href="https://campuschampions.cyberinfrastructure.org/" class="link-button" target="_blank"><button>Program information</button></a>
-     <p class="description"><strong>Program funding:</strong> The Campus Champions program is supported in part by NSF Award #2505400, "EAGER: Empowering the AI Research Community through Facilitation, Access, and Collaboration," led by PI Forough Ghahramali through NJEDge.Net (December 2024 through November 2026). The award strengthens the Campus Champions program by supporting conference participation, mentorship, and contributions to the National AI Research Resource (NAIRR).</p>
-     <a href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2505400" class="link-button" target="_blank"><button>View NSF Award #2505400</button></a>
+     <button class="toggle-btn" onclick="toggleSubmenu('programFunding', this)">Program funding</button>
+     <div id="programFunding" class="submenu">
+      <p class="description">The Campus Champions program is supported in part by NSF Award #2505400, "EAGER: Empowering the AI Research Community through Facilitation, Access, and Collaboration," led by PI Forough Ghahramali through NJEDge.Net (December 2024 through November 2026). The award strengthens the Campus Champions program by supporting conference participation, mentorship, and contributions to the National AI Research Resource (NAIRR).</p>
+      <a href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2505400" class="link-button" target="_blank"><button>View NSF Award #2505400</button></a>
+     </div>
      <p class="description"><strong>Meetings and communications:</strong> Check your program communications for the schedule of Champion meetings and how to join.</p>
      <a href="https://hpcuniversity.org/" class="link-button" target="_blank"><button>HPC learning resources</button></a>
      <a href="https://campuschampions.cyberinfrastructure.org/announcements" class="link-button" target="_blank"><button>Conferences and events</button></a>
