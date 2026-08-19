@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Champion Roadmap</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 40px;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-direction: column; /* stack main menus vertically */
+            gap: 15px;
+            position: relative;
+        }
+
+        .main-button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            width: 500px;
+            text-align: left;
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .main-button:hover {
+            background-color: #222;
+        }
+
+        .submenu {
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            width: 450px;
+            margin-left: 20px;
+        }
+
+        .submenu > .submenu {
+            display: none; /* hide nested submenus by default */
+            margin-left: 20px;
+        }
+
+        .submenu > .submenu button {
+            background-color: #656565;
+            color: white;
+            border: none;
+            text-align: left;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #222;
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            text-align: left;
+            border-radius: 4px;
+        }
+
+        .link-button button {
+            background-color: #eee;
+            color: #000;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+
+        .link-button button:hover {
+            background-color: #ddd;
+        }
+
+        .submenu button {
+            background-color: #931322;
+            color: white;
+            border: none;
+            text-align: left;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        .submenu button:hover {
+            background-color: #000;
+        }
+
+        .menu-item {
+            position: relative;
+        }
+
+        .toggle-btn::after {
+            content: " ▶";
+        }
+
+        .toggle-btn.open::after {
+            content: " ▼";
+        }
+
+        .description {
+            margin: 4px 0 10px 15px;
+            font-size: 14px;
+            color: #000;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+  <h1>Campus Champion Roadmap</h1>
+
+  <p>
+    Your Campus Champion journey is about participating in the community,
+    exploring high-performance computing (HPC), connecting with others,
+    sharing what you learn, and growing into a leader.<br>
+    <br>
+    Click on each one below:<br>
+    <br>
+    <em>Note: resource links will take you to an external site or open in a new browser tab.</em>
+  </p>
+<div class="menu-container">
+  <div style="display: flex; flex-direction: column; gap: 15px;">
+    <div class="menu-item">
+    <button class="main-button toggle-btn" onclick="toggleSubmenu('stage1', this)">1. Start Your Campus Champion Journey</button>
+    <div id="stage1" class="submenu">
+      <p class="note">Learn what the program is and get oriented.</p>
+      <button class="toggle-btn" onclick="toggleSubmenu('champProgram', this)">Campus Champion Program</button>
+      <div id="champProgram" class="submenu">
+       <a href="https://campuschampions.cyberinfrastructure.org/" class="link-button" target="_blank"><button>What is a Campus Champion?</button></a>
+       <a href="https://campuschampions.cyberinfrastructure.org/" class="link-button" target="_blank"><button>What does a Campus Champion do?</button></a>
+       <a href="https://campuschampions.cyberinfrastructure.org/champions-map" class="link-button" target="_blank"><button>Who are the current Campus Champions?</button></a>
+       <a href="https://campuschampions.cyberinfrastructure.org/form/join-campus-champions" class="link-button" target="_blank"><button>Campus Champion onboarding</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <button class="main-button toggle-btn" onclick="toggleSubmenu('stage2', this)">2. Participate</button>
+    <div id="stage2" class="submenu">
+      <p class="note">Be an active member of the Campus Champions community.</p>
+      <button class="toggle-btn" onclick="toggleSubmenu('participation', this)">Participation</button>
+      <div id="participation" class="submenu">
+        <p class="description">&bull; Attend Campus Champion meetings.</p>
+        <p class="description">&bull; Stay connected to program communications.</p>
+        <p class="description">&bull; Respond to relevant Campus Champion email threads.</p>
+        <p class="description">&bull; Participate in discussions and activities.</p>
+        <p class="description">&bull; Ask questions when you need help.</p>
+        <p class="description">&bull; Share useful information and opportunities with other Champions.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <button class="main-button toggle-btn" onclick="toggleSubmenu('stage3', this)">3. Explore HPC</button>
+    <div id="stage3" class="submenu">
+      <p class="note">
+        Build enough HPC awareness to understand the field, recognize opportunities,
+        and know where to go for deeper technical learning.
+      </p>
+      <button class="toggle-btn" onclick="toggleSubmenu('hpcFoundations', this)">HPC Foundations</button>
+      <div id="hpcFoundations" class="submenu">
+       <p class="description"><strong>What is HPC?</strong> High-performance computing (HPC) uses clusters of powerful, tightly connected computers to solve problems that are too large or too complex for a single machine, running calculations in parallel across many processors at once.</p>
+       <p class="description"><strong>What is a supercomputer?</strong> A supercomputer is a large-scale computing system built from many interconnected processors working together to solve problems far beyond the capacity of a single computer.</p>
+       <a href="https://access-ci.org/" class="link-button" target="_blank"><button>Why does HPC matter to research?</button></a>
+       <p class="description"><strong>What kinds of research use HPC?</strong> HPC supports research across nearly every discipline, including climate modeling, genomics, materials science, engineering, and social science simulations.</p>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSubmenu('hpcResources', this)">HPC Resources</button>
+      <div id="hpcResources" class="submenu">
+       <button class="toggle-btn" onclick="toggleSubmenu('gettingStarted', this)">Getting started with HPC resources</button>
+       <div id="gettingStarted" class="submenu">
+        <a href="https://access-ci.org/get-started/" class="link-button" target="_blank"><button>ACCESS-CI: Get Started</button></a>
+        <p class="description"><strong>NAIRR Pilot:</strong> The National AI Research Resource (NAIRR) Pilot is a federally led initiative that connects U.S. researchers and educators to the computational, data, and training resources needed to advance AI research. It is coordinated by the National Science Foundation along with other federal agencies and private-sector partners, and it has supported hundreds of research projects nationwide.</p>
+        <button class="toggle-btn" onclick="toggleSubmenu('nairrLinks', this)">NAIRR Pilot resources</button>
+        <div id="nairrLinks" class="submenu">
+         <a href="https://nairrpilot.org/getting-started" class="link-button" target="_blank"><button>NAIRR Pilot: Getting Started</button></a>
+         <a href="https://nairrpilot.org/help/faq" class="link-button" target="_blank"><button>NAIRR Pilot: FAQ</button></a>
+         <a href="https://nairrpilot.org/projects/awarded" class="link-button" target="_blank"><button>NAIRR Pilot: Awarded Projects</button></a>
+        </div>
+       </div>
+       <a href="https://access-ci.org/" class="link-button" target="_blank"><button>Campus Champion allocations</button></a>
+       <a href="https://hpcuniversity.org/" class="link-button" target="_blank"><button>HPC training resources</button></a>
+       <button class="toggle-btn" onclick="toggleSubmenu('userGuides', this)">HPC user guides and documentation</button>
+       <div id="userGuides" class="submenu">
+        <a href="https://access-ci.org/" class="link-button" target="_blank"><button>ACCESS-CI documentation</button></a>
+        <a href="https://nairrpilot.org/about/overview" class="link-button" target="_blank"><button>NAIRR Pilot documentation</button></a>
+       </div>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSubmenu('techLearning', this)">Technical Learning Resources</button>
+      <div id="techLearning" class="submenu">
+       <p class="description">
+         These resources are provided as places to learn more; the Campus Champion
+         roadmap does not attempt to reproduce the technical training offered by
+         other HPC organizations.
+       </p>
+       <a href="https://swcarpentry.github.io/shell-novice/" class="link-button" target="_blank"><button>Linux and command-line resources</button></a>
+       <a href="https://www.globus.org/" class="link-button" target="_blank"><button>File transfer and data management</button></a>
+       <a href="https://slurm.schedmd.com/documentation.html" class="link-button" target="_blank"><button>Batch processing and workload management</button></a>
+       <p class="description"><strong>Programming and parallel computing:</strong> Parallel programming techniques like MPI and OpenMP let your code split work across many processors at once. This is essential for running efficiently on HPC systems.</p>
+       <button class="toggle-btn" onclick="toggleSubmenu('containers', this)">Containers</button>
+       <div id="containers" class="submenu">
+        <a href="https://docs.docker.com/" class="link-button" target="_blank"><button>Docker documentation</button></a>
+        <a href="https://apptainer.org/docs/" class="link-button" target="_blank"><button>Apptainer (Singularity) documentation</button></a>
+       </div>
+       <a href="https://www.paraview.org/" class="link-button" target="_blank"><button>Data analysis and visualization</button></a>
+       <a href="https://pegasus.isi.edu/" class="link-button" target="_blank"><button>Scientific workflows</button></a>
+       <p class="description"><strong>Advanced HPC topics:</strong> Once you're comfortable with the basics, advanced topics include GPU computing, large-scale machine learning, and performance optimization. Check with your local HPC center for specialized training.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <button class="main-button toggle-btn" onclick="toggleSubmenu('stage4', this)">4. Connect With the HPC Community</button>
+    <div id="stage4" class="submenu">
+      <p class="note">
+        Discover the people, organizations, events, and opportunities that make up
+        the broader HPC community.
+      </p>
+      <button class="toggle-btn" onclick="toggleSubmenu('community', this)">Community</button>
+      <div id="community" class="submenu">
+       <p class="description"><strong>Meet other Campus Champions:</strong> Check the welcome email you received when you joined the program. It includes an invite to the Champions community space.</p>
+       <p class="description"><strong>Connect with HPC professionals:</strong> Look for the community invite in your onboarding email to connect directly with HPC professionals and support staff.</p>
+       <a href="https://campuschampions.cyberinfrastructure.org/knowledge-base/resources" class="link-button" target="_blank"><button>Connect with researchers and computing centers</button></a>
+       <a href="https://sc-accel.org/" class="link-button" target="_blank"><button>HPC community organizations</button></a>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSubmenu('conferences', this)">Conferences, Workshops, and Events</button>
+      <div id="conferences" class="submenu">
+       <button class="toggle-btn" onclick="toggleSubmenu('majorConferences', this)">Major HPC conferences</button>
+       <div id="majorConferences" class="submenu">
+        <a href="https://sc-conference.org/" class="link-button" target="_blank"><button>SC (Supercomputing Conference)</button></a>
+        <a href="https://www.isc-hpc.com/" class="link-button" target="_blank"><button>ISC High Performance</button></a>
+        <a href="https://pearc.acm.org/" class="link-button" target="_blank"><button>PEARC (Practice &amp; Experience in Advanced Research Computing)</button></a>
+       </div>
+       <a href="https://campuschampions.cyberinfrastructure.org/announcements" class="link-button" target="_blank"><button>Workshops and webinars</button></a>
+       <button class="toggle-btn" onclick="toggleSubmenu('studentOpportunities', this)">Student opportunities</button>
+       <div id="studentOpportunities" class="submenu">
+        <a href="https://sc-accel.org/" class="link-button" target="_blank"><button>SC-ACCEL student volunteer program</button></a>
+        <a href="https://access-ci.org/" class="link-button" target="_blank"><button>ACCESS student programs</button></a>
+       </div>
+       <a href="https://campuschampions.cyberinfrastructure.org/announcements" class="link-button" target="_blank"><button>How to find events and opportunities</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <button class="main-button toggle-btn" onclick="toggleSubmenu('stage5', this)">5. Share &amp; Advocate</button>
+    <div id="stage5" class="submenu">
+      <p class="note">
+        Bring HPC awareness back to your campus and help other people discover
+        opportunities in advanced computing.
+      </p>
+      <button class="toggle-btn" onclick="toggleSubmenu('shareLearn', this)">Share What You Learn</button>
+      <div id="shareLearn" class="submenu">
+       <p class="description"><strong>Share an HPC resource:</strong> Found a useful HPC tool, tutorial, or article? Share it with the Champions community through your usual communication channels.</p>
+       <p class="description"><strong>Share a research example:</strong> Highlight a research project that used HPC and share it with the Champions community.</p>
+       <p class="description"><strong>Talk about HPC with students and colleagues:</strong> Use what you've learned to introduce HPC concepts informally to students and colleagues on your campus. Even a short conversation can spark interest.</p>
+       <p class="description"><strong>Tell your Campus Champion story:</strong> Share your experience as a Champion with the broader community.</p>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSubmenu('campusOutreach', this)">Campus Outreach</button>
+      <div id="campusOutreach" class="submenu">
+       <p class="description"><strong>Introduce HPC to a class or student group:</strong> Offer to give a short talk or demo introducing HPC to a class, club, or student group on your campus.</p>
+       <p class="description"><strong>Host or support an informational activity:</strong> Organize or help run an event, such as a workshop, info session, or lab tour, to raise HPC awareness on campus.</p>
+       <p class="description"><strong>Connect researchers with computing resources:</strong> Help researchers on your campus identify and request the right HPC allocations for their work.</p>
+       <p class="description"><strong>Share opportunities with your campus community:</strong> Pass along HPC-related opportunities, such as training, allocations, and events, to researchers and students on your campus.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <button class="main-button toggle-btn" onclick="toggleSubmenu('stage6', this)">6. Grow Into Leadership</button>
+    <div id="stage6" class="submenu">
+      <p class="note">
+        Use your experience to contribute to the Campus Champions community and
+        help others engage with HPC.
+      </p>
+      <button class="toggle-btn" onclick="toggleSubmenu('leadership', this)">Leadership Opportunities</button>
+      <div id="leadership" class="submenu">
+        <p class="description">&bull; Lead a campus activity.</p>
+        <p class="description">&bull; Present at a Campus Champion meeting.</p>
+        <p class="description">&bull; Share a project or experience.</p>
+        <p class="description">&bull; Mentor or support another Champion.</p>
+        <p class="description">&bull; Contribute to Campus Champion resources.</p>
+        <p class="description">&bull; Participate in outreach or community activities.</p>
+        <p class="description">&bull; Present at a conference or other professional event.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <button class="main-button toggle-btn" onclick="toggleSubmenu('resources', this)">Campus Champion Resources</button>
+    <div id="resources" class="submenu">
+     <a href="https://campuschampions.cyberinfrastructure.org/" class="link-button" target="_blank"><button>Program information</button></a>
+     <p class="description"><strong>Program funding:</strong> The Campus Champions program is supported in part by NSF Award #2505400, "EAGER: Empowering the AI Research Community through Facilitation, Access, and Collaboration," led by PI Forough Ghahramali through NJEDge.Net (December 2024 through November 2026). The award strengthens the Campus Champions program by supporting conference participation, mentorship, and contributions to the National AI Research Resource (NAIRR).</p>
+     <a href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2505400" class="link-button" target="_blank"><button>View NSF Award #2505400</button></a>
+     <p class="description"><strong>Meetings and communications:</strong> Check your program communications for the schedule of Champion meetings and how to join.</p>
+     <a href="https://hpcuniversity.org/" class="link-button" target="_blank"><button>HPC learning resources</button></a>
+     <a href="https://campuschampions.cyberinfrastructure.org/announcements" class="link-button" target="_blank"><button>Conferences and events</button></a>
+     <button class="toggle-btn" onclick="toggleSubmenu('communityResourcesSub', this)">Community resources</button>
+     <div id="communityResourcesSub" class="submenu">
+      <a href="https://campuschampions.cyberinfrastructure.org/knowledge-base/resources" class="link-button" target="_blank"><button>Connect with researchers and computing centers</button></a>
+      <a href="https://sc-accel.org/" class="link-button" target="_blank"><button>SC-ACCEL</button></a>
+     </div>
+     <p class="description"><strong>Campus outreach resources:</strong> See the Campus Outreach guidance in Stage 5 above for ways to get involved on your campus.</p>
+     <p class="description"><strong>Frequently asked questions:</strong> Common questions about the Champion program and HPC resources are covered here. Reach out to the Champions community if you don't see an answer.</p>
+    </div>
+  </div>
+    </div>
+</div>
+
+<script>
+    function toggleSubmenu(id, btn) {
+        const submenu = document.getElementById(id);
+        const isOpen = submenu.style.display === "flex";
+        submenu.style.display = isOpen ? "none" : "flex";
+        btn.classList.toggle("open", !isOpen);
+    }
+</script>
+</body>
+</html>
