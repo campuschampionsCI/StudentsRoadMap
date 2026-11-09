@@ -110,6 +110,40 @@
             color: #000;
             line-height: 1.4;
         }
+
+        /* Mobile / narrow screens (e.g. when embedded in an iframe on a phone) */
+        @media (max-width: 600px) {
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 12px;
+                overflow-wrap: anywhere;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .main-button {
+                width: 100%;
+            }
+
+            .submenu {
+                width: auto;
+                max-width: 100%;
+                margin-left: 10px;
+            }
+
+            .submenu > .submenu {
+                margin-left: 10px;
+            }
+
+            .description {
+                margin-left: 5px;
+            }
+        }
     </style>
 </head>
 <body>
